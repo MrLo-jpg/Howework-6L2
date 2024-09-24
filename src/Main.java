@@ -1,11 +1,12 @@
 import java.time.LocalDate;
 
 public class Main {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
 
         // Задача 1.
         int year = 2000;
         checkAndPrintYear(year);
+
     }
 
     private static void checkAndPrintYear(int year) {
@@ -15,13 +16,13 @@ public class Main {
             System.out.println(year + "  год - невисокосный год");
         }
         //Задача 2
-        int deviseYear = 2000;
+        int deviseYear = 2015;
         int clientOs = 1;
-        System.out.println(getRecommentAppLicationVersion(deviseYear, clientOs));
-        System.out.println(getRecommentAppLicationVersion(2025, 1));
+
+        System.out.println(getRecommentAppLicationVersion(2017, 1));
     }
 
-     private static String getRecommentAppLicationVersion(int deviceYear, int clientOs) {
+    private static String getRecommentAppLicationVersion(int deviceYear, int clientOs) {
         String resultMessage = " Усановите ";
         if (isOldDevise(deviceYear)) {
             resultMessage += " lite ";
@@ -35,31 +36,20 @@ public class Main {
         return resultMessage;
     }
 
-     private static boolean isOldDevise(int deviseYear) {
+    private static boolean isOldDevise(int deviseYear) {
         int currentYear = LocalDate.now().getYear();//2024
-        return deviseYear < currentYear;
-        // Задача 3.
-         System.out.println(calculateDeliveryDays(88));}
+        return deviseYear < currentYear && deviseYear < 2015;
 
-         public static int calculateDeliveryDays(int deliveryDistance)
 
-         { int result = -1;
-        if (deliveryDistance > 0 && deliveryDistance <= 20) {
-            result = 1;
-        } else if (deliveryDistance <= 60) {
-            result = 2;
+        //Задача 3.
 
-        } else if (deliveryDistance < +100) {
-            result = 3;
+
+
+
+            }
         }
-        return result;
-    }
 
 
-
-
-}
-}
 
 
 
